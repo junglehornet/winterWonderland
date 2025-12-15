@@ -79,11 +79,11 @@ class WinterWonderland extends Canvas
        window.fillRect(0, 400, 800, 200);
 
        window.setColor(Color.WHITE);
-       int incr = Math.clamp(frameCounter / 20, 0, 50);
+       int incr = Utils.clamp(frameCounter / 20, 0, 50);
 
        if (frameCounter / 20 > 50) {
-           incr -= Math.clamp((frameCounter - 1000) / 20, 0, 50);
-           int transparency = Math.clamp((frameCounter - 1000) / 10, 0, 255);
+           incr -= Utils.clamp((frameCounter - 1000) / 20, 0, 50);
+           int transparency = Utils.clamp((frameCounter - 1000) / 10, 0, 255);
            window.setColor(new Color(255, 255, 255, 255 - transparency));
        }
        window.fillRect(0, 400 - incr, 800, 200 + incr);
@@ -94,7 +94,7 @@ class WinterWonderland extends Canvas
 	 //add more code here
        Color preColor = window.getColor();
 
-       double heightPercent = 1 - Math.clamp(((double) frameCounter - 1000) / 500, 0, 1);
+       double heightPercent = 1 - Utils.clamp(((double) frameCounter - 1000) / 500, 0, 1);
 
        window.setColor(offwhite);
        window.fillOval(50, 455 - (int) (35 * heightPercent), 70, (int) (70 * heightPercent));
@@ -119,7 +119,7 @@ class WinterWonderland extends Canvas
 	 //add more code here
        Color preColor = window.getColor();
 
-       double heightPercent = 1 - Math.clamp(((double) frameCounter - 1000) / 500, 0, 1);
+       double heightPercent = 1 - Utils.clamp(((double) frameCounter - 1000) / 500, 0, 1);
 
        window.setColor(offwhite);
        window.fillOval(350, 455 - (int) (35 * heightPercent), 70, (int) (70 * heightPercent));

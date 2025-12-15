@@ -37,9 +37,9 @@ public class Snow {
         Vector<Double> accelerationVector = new Vector<>(2, 0);
         accelerationVector.add(Math.random() - 0.5); // downward velocity
         accelerationVector.add(Math.random() - 0.5); // lateral velocity
-        velocity.set(0, Math.clamp(velocity.get(0) + accelerationVector.get(0), 0.5, 3));
+        velocity.set(0, Utils.clamp(velocity.get(0) + accelerationVector.get(0), 0.5, 3));
         //velocity.set(0, Math.clamp(velocity.get(0) + accelerationVector.get(0), -3, 3));
-        velocity.set(1, Math.clamp(velocity.get(1) + accelerationVector.get(1), -3, 3));
+        velocity.set(1, Utils.clamp(velocity.get(1) + accelerationVector.get(1), -3, 3));
         y += velocity.get(0);
         //y = (int) Math.clamp(y + velocity.get(0), -5, windowWidth);
         x += velocity.get(1);

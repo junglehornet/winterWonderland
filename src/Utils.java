@@ -1,0 +1,13 @@
+public class Utils {
+    public static int clamp(int x, int min, int max) {
+        if (x < min) return min;
+        if (x > max) return max;
+        return x;
+    }
+
+    public static double clamp(double x, double min, double max) {
+        if (x < min) return min;
+        if (x > max) return max;
+        return x;
+    }
+}
